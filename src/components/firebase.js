@@ -5,14 +5,13 @@ import "firebase/auth";
 import "firebase/functions";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCQ0_q1aSWOjg1UOMawKTB2GP3Yc9Lw4dA",
-  authDomain: "todo-list-2d0ff.firebaseapp.com",
-  projectId: "todo-list-2d0ff",
-  storageBucket: "todo-list-2d0ff.appspot.com",
-  messagingSenderId: "685320277964",
-  appId: "1:685320277964:web:140e64f6714fdea5179769",
-  measurementId: "G-GNBN413MMW"
-
+  apiKey: "AIzaSyBiAu1GD82FPJSFyZIHQ8llU4UI-mUSeRk",
+  authDomain: "todos-8eed6.firebaseapp.com",
+  projectId: "todos-8eed6",
+  storageBucket: "todos-8eed6.appspot.com",
+  messagingSenderId: "786561593163",
+  appId: "1:786561593163:web:2d7ed1606c802cf24002ce",
+  measurementId: "G-JT1Y1TLBLX"
 })
 
 const auth = firebase.auth();
