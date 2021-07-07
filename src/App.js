@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./components/firebase";
+import Todos from "./components/Todos";
+import firebase from "firebase";
+import Header from "./components/Header";
 
-function App() {
-  return (
+
+const signInWithGoogle = () => auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+
+
+const SignIn = () => (
+  <main >
+    <Header />
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="text"> Sign in to continue 🤩</h1>
+      <button className="button" onClick={signInWithGoogle}>Sign in with Google</button>
     </div>
-  );
-}
+  </main>
+);
+
+const App = () => {
+  const [user] = useAuthState(auth);
+
+  return user ? <Todos uid={user.uid} name={user.displayName} img={user.photoURL} email={user.email} /> : <SignIn />;
+};
 
 export default App;

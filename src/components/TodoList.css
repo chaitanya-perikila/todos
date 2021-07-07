@@ -1,0 +1,52 @@
+.todolist1{
+    overflow-wrap: break-word;  
+    display: flex;
+    width: 65vw;
+
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgb(255, 212, 212);
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+}
+
+.todolist2{
+    overflow-wrap: break-word;
+    transition: all 200ms ease-in-out;
+    display: flex;
+    min-width: 65vw;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgb(164, 255, 217);
+    padding: 15px;
+    border-radius: 10px;
+
+}
+.todolist2> p{
+    text-decoration: line-through;
+    overflow-wrap: break-word; 
+    width: 57vw;
+}
+
+
+.check{
+    margin-left: 1.5vw;
+    fill: rgb(0, 212, 0);
+    
+}
+.bin{
+    margin-left: 1.5vw;
+    
+    fill: red;
+}
+
+.todolist1>p{
+    width: 57vw;
+    overflow-wrap: break-word; 
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
